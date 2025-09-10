@@ -6,11 +6,11 @@ from flask import Blueprint, jsonify, request
 from mock import usuarios
 
 
-user_bp_add = Blueprint('user_bp_app', __name__)
+user_add = Blueprint('user_add', __name__)
 
 
 
-@user_bp_add.route('/add', methods=['POST'])
+@user_add.route('/add', methods=['POST'])
 def fn_add_new_user():
     if request.method == 'POST':
         req = request.json
