@@ -4,12 +4,12 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from flask import Blueprint, jsonify, request
 from mock import usuarios
-user_bp_delete = Blueprint('user_bp_delete', __name__)
+user_delete = Blueprint('user_delete', __name__)
 
-@app.route('/del/<int:user_id>', methods=['DELETE'])
-def fn_delete_user_by_id(user_email):
+@app.route('/user/delete', methods=['DELETE'])
+def fn_delete_user_by_email(user_email):
     if request.method == 'DELETE':
-        res = _search_user_by_id(user_id)
+        res = _search_user_by_email(user_email)
     
         usuarios.remove(res)
     
