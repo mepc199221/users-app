@@ -2,7 +2,7 @@ import sys
 import os
 from flask import request
 from flask import Blueprint, jsonify
-from mock import usuarios
+from mock_data import usuarios
 
 
 #sys.path.append(os.path.dirname(os.path.abspath(__file__)))
