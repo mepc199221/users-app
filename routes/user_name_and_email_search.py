@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from mock_data import usuarios
+from mock import usuarios
 
 user_bp = Blueprint('user_bp', __name__)
 

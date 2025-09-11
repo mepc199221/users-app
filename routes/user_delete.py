@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from flask import Blueprint, jsonify, request
-from mock_data import usuarios
+from mock import usuarios
 user_delete = Blueprint('user_delete', __name__)
 
 @user_delete.route('/user/delete', methods=['DELETE'])
