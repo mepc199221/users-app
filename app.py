@@ -18,7 +18,7 @@ def index():
 def handle_404(e):
     response = {
     "error": "Not Found",
-    "message": "La ruta solicitada no existe fuera de aqui mi loco",
+    "message": "La ruta solicitada no existe",
     "status": 404
     }
     return jsonify(response), 404
