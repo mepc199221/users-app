@@ -4,12 +4,9 @@ from flask import request
 from flask import Blueprint, jsonify
 from mock import usuarios
 
-
-#sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-product_search = Blueprint("product_search", __name__)
+user_email_search = Blueprint("user_email_search", __name__)
 
 
 def _search_product_by_email(email):
@@ -19,7 +16,7 @@ def _search_product_by_email(email):
     return None    
 
 
-@product_search.route("/", methods = ["GET"])
+@user_email_search.route("/", methods = ["GET"])
 def search_by_email():
     if request.method == "GET":
 
