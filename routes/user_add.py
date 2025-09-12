@@ -1,14 +1,11 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from flask import Blueprint, jsonify, request
 from mock import usuarios
 
 
 user_add = Blueprint('user_add', __name__)
-
-
 
 @user_add.route('/add', methods=['POST'])
 def fn_add_new_user():
