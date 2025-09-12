@@ -16,12 +16,12 @@ def index():
 
 @app.errorhandler(404)
 def handle_404(e):
-response = {
-"error": "Not Found",
-"message": "La ruta solicitada no existe fuera de aqui mi loco",
-"status": 404
-}
-return jsonify(response), 404
+    response = {
+    "error": "Not Found",
+    "message": "La ruta solicitada no existe fuera de aqui mi loco",
+    "status": 404
+    }
+    return jsonify(response), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
