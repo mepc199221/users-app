@@ -21,6 +21,15 @@ app.register_blueprint(user_delete, url_prefix='/delete')
 def index():
     return jsonify ({"data":"user-app"})
 
+@app.errorhandler(404)
+def handle_404(e):
+    response = {
+    "error": "Not Found",
+    "message": "La ruta solicitada no existe",
+    "status": 404
+    }
+    return jsonify(response), 404
+
 if __name__ == "__main__":
     app.run(debug=True)
 
